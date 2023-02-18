@@ -49,7 +49,7 @@ export default function Avto(){
             <div className={styles.left}>
                 <img src={images[avto.basic.image]} alt=""/>
                 <p>Amount: ${avto.basic.basicAmount}</p>
-                <h4>Added features:</h4>
+                <h2>Added features:</h2>
                 <ul>
                     {  avto.basic.features.length === 0 ?
                         "You can purchase items from the store":
@@ -62,7 +62,7 @@ export default function Avto(){
                 </ul>
             </div>
             <div className={styles.right}>
-                <h3>Aditional Features</h3>
+                <h2>Aditional Features</h2>
                 <ul>
                     {  avto.features.length === 0?
                         "Nise looking car":
@@ -70,11 +70,11 @@ export default function Avto(){
                         <button onClick={()=>add(item.id)}>Add</button> {item.title} (+{item.price})</li>)}
                 </ul>
 
-                <h4>
+                <h2>
                     Total amount: $
                     {avto.basic.basicAmount + avto.basic.features
                         .reduce((summ, item)=>{return summ+item.price},0)}
-                </h4>
+                </h2>
             </div>
         </div>
     )

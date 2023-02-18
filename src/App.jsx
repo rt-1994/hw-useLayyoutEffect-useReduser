@@ -6,6 +6,7 @@ import Connect from "./components/Connect/Connect";
 import Tasks from "./components/Tasks/Tasks";
 import Colors from "./components/Colors/Colors";
 import Avto from "./components/Avto/Avto";
+import Counter from "./components/Counter/Counter";
 
 
 localStorage.setItem("count", 0);
@@ -13,8 +14,11 @@ localStorage.setItem("count", 0);
 const App = () => {
     return (
         <div className={tabStyles.tabs}>
-            <h1>Home work(useState, useEffect)</h1>
+            <h1>Home work(useReducer, useLayoutEffect)</h1>
             <Tabs>
+                <Tab label="Counter">
+                    <Counter/>
+                </Tab>
                 <Tab label="Avto">
                     <Avto/>
                 </Tab>
